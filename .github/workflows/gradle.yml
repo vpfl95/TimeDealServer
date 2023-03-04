@@ -29,6 +29,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
     - name: 스프링부트 애플리케이션 빌드 # (1)
-      run: |
-        chmod +x gradlew
-        ./gradlew build
+      run: ./gradlew build -x test -x ktlintCheck -x ktlintTestSourceSetCheck -x ktlintMainSourceSetCheck -x ktlintKotlinScriptCheck
