@@ -30,4 +30,5 @@ jobs:
         distribution: 'temurin'
     - name: 스프링부트 애플리케이션 빌드 # (1)
       run: |
+        git update-index --add --chmod=+x gradlew
         ./gradlew bootJar
